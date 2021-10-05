@@ -20,6 +20,7 @@ describe('ProductEditComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    alert("essai git hub");
+    expect(omponent).toBeTruthy();
   });
 });

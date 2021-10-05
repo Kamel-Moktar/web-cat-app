@@ -1,1 +1,58 @@
-<p>product-edit works!</p>
+<div class="container">
+<!--    {{productFormGroup.value|json}}-->
+  <form  [formGroup]="productFormGroup">
+    <div class="form-group">
+      <input type="hidden" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+      <label>Nom :</label>
+      <input type="text" class="form-control" formControlName="name"
+             [ngClass]="{'is-invalid':!nameFocused&&productFormGroup.controls.name.errors, 'is-valid':!nameFocused&&productFormGroup.controls.name.valid}"
+             (focusout)="onNameFocusOut()"
+             (focus)="onNameFocus()" >
+      <div *ngIf="!nameFocused&&productFormGroup.controls.name.errors" class="invalid-feedback" >
+        le champs nom de produit ne doit pas etre vide
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label> price :</label>
+      <input type="number" class="form-control" formControlName="price"
+             [ngClass]="{'is-invalid':!priceFocused&&productFormGroup.controls.price.invalid, 'is-valid':!priceFocused&&productFormGroup.controls.price.valid}"
+             (focusout)="onPriceFocusOut()"
+             (focus)="onPriceFocus()"
+      >
+
+      <div *ngIf="!priceFocused &&productFormGroup.controls.price.errors" class="invalid-feedback" >
+        {{productFormGroup.value.price}} donne invalide
+      </div>
+
+    </div>
+
+    <div class="form-group">
+      <label> quantity :</label>
+      <input type="number" class="form-control" formControlName="quantity"
+             [ngClass]="{'is-invalid':!quantityFocused&&productFormGroup.controls.quantity.invalid, 'is-valid':!quantityFocused&&productFormGroup.controls.quantity.valid}"
+             (focusout)="onQuantityFocusOut()"
+             (focus)="onQuantityFocus()"
+      >
+
+      <div *ngIf="!quantityFocused &&productFormGroup.controls.quantity.errors" class="invalid-feedback" >
+        {{productFormGroup.value.quantity}} donne invalide
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label> Selected:</label>
+      <input type="checkbox" class="form-check" formControlName="selected">
+    </div>
+    <div class="form-group">
+      <label> Available:</label>
+      <input type="checkbox" class="form-check" formControlName="available" >
+    </div>
+    <button (click)="onEditProduct(productFormGroup.value)" class="btn btn-success">Save</button>
+  </form>
+
+</div>
+
