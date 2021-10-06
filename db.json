@@ -87,6 +87,14 @@
       "selected": false,
       "available": true,
       "id": 26
+    },
+    {
+      "name": "ffff",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 27
     }
   ]
 }
