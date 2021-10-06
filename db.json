@@ -5,7 +5,7 @@
       "name": "smartphone",
       "price": 44,
       "quantity": 20,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -13,7 +13,7 @@
       "name": "smartphone",
       "price": 44,
       "quantity": 20,
-      "selected": true,
+      "selected": false,
       "available": true
     },
     {
@@ -25,12 +25,12 @@
       "available": true
     },
     {
+      "id": 12,
       "name": "rrrrrrr",
-      "price": 0,
-      "quantity": 0,
-      "selected": false,
-      "available": true,
-      "id": 12
+      "price": 55,
+      "quantity": 55,
+      "selected": true,
+      "available": true
     },
     {
       "name": "dddd",
@@ -45,14 +45,14 @@
       "name": "micro ordinateur",
       "price": 33,
       "quantity": 33,
-      "selected": false,
+      "selected": true,
       "available": true
     },
     {
       "name": "windows application",
       "price": "2.25",
       "quantity": "3.55",
-      "selected": true,
+      "selected": false,
       "available": true,
       "id": 15
     },
